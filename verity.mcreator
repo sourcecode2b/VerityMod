@@ -294,11 +294,11 @@
       "registry_name": "box",
       "metadata": {
         "files": [
-          "src/main/resources/assets/verity/blockstates/box.json",
           "src/main/resources/assets/verity/models/block/box.json",
+          "src/main/resources/data/verity/loot_tables/blocks/box.json",
           "src/main/java/net/mcreator/verity/block/BoxBlock.java",
           "src/main/resources/assets/verity/models/item/box.json",
-          "src/main/resources/data/verity/loot_tables/blocks/box.json"
+          "src/main/resources/assets/verity/blockstates/box.json"
         ]
       }
     },
@@ -942,9 +942,9 @@
       "registry_name": "veritye",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java",
           "src/main/java/net/mcreator/verity/client/renderer/VERITYERenderer.java",
-          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json",
-          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java"
+          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json"
         ]
       }
     },
@@ -1006,11 +1006,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/verity/blockstates/flashlightblock.json",
-          "src/main/resources/assets/verity/models/block/flashlightblock.json",
-          "src/main/resources/data/verity/loot_tables/blocks/flashlightblock.json",
-          "src/main/java/net/mcreator/verity/block/FlashlightblockBlock.java",
           "src/main/resources/assets/verity/models/item/flashlightblock.json",
-          "src/main/java/net/mcreator/verity/block/entity/FlashlightblockBlockEntity.java"
+          "src/main/resources/assets/verity/models/block/flashlightblock.json",
+          "src/main/java/net/mcreator/verity/block/FlashlightblockBlock.java",
+          "src/main/resources/data/verity/loot_tables/blocks/flashlightblock.json"
         ]
       }
     },
@@ -1037,32 +1036,15 @@
       }
     },
     {
-      "name": "FlashlightblockBlockAdded",
-      "type": "procedure",
+      "name": "Flashlight",
+      "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flashlightblock_block_added",
+      "registry_name": "flashlight",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
         "files": [
-          "src/main/java/net/mcreator/verity/procedures/FlashlightblockBlockAddedProcedure.java"
+          "src/main/resources/assets/verity/models/item/flashlight.json",
+          "src/main/java/net/mcreator/verity/item/FlashlightItem.java"
         ]
       }
     },
@@ -1097,19 +1079,6 @@
       }
     },
     {
-      "name": "FLASHLIGHTOFF",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flashlightoff",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/verity/item/FLASHLIGHTOFFItem.java",
-          "src/main/resources/assets/verity/models/item/flashlightoff.json"
-        ]
-      }
-    },
-    {
       "name": "FlashlightRightclicked",
       "type": "procedure",
       "compiles": true,
@@ -1132,19 +1101,6 @@
       }
     },
     {
-      "name": "Flashlight",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flashlight",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/verity/item/FlashlightItem.java",
-          "src/main/resources/assets/verity/models/item/flashlight.json"
-        ]
-      }
-    },
-    {
       "name": "FLASHLIGHTOFFRightclicked",
       "type": "procedure",
       "compiles": true,
@@ -1163,6 +1119,36 @@
         ],
         "files": [
           "src/main/java/net/mcreator/verity/procedures/FLASHLIGHTOFFRightclickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FlashlightblockBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightblock_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/FlashlightblockBlockAddedProcedure.java"
         ]
       }
     },
@@ -1193,6 +1179,19 @@
         ],
         "files": [
           "src/main/java/net/mcreator/verity/procedures/BoxOnRandomClientDisplayTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FLASHLIGHTOFF",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightoff",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/flashlightoff.json",
+          "src/main/java/net/mcreator/verity/item/FLASHLIGHTOFFItem.java"
         ]
       }
     }
@@ -1229,6 +1228,14 @@
         "my-gal-verity-made-with-voicemod"
       ],
       "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "flashlight",
+      "files": [
+        "lesiakower-torch-turned-on-flashlight-click-457506"
+      ],
+      "category": "neutral",
       "subtitle": ""
     },
     {
@@ -1282,8 +1289,8 @@
       "item.verity.veritye_spawn_egg": "VERITY Spawn Egg",
       "entity.verity.veritye": "VERITY",
       "block.verity.flashlightblock": "Flashlightblock",
-      "item.verity.flashlightoff": "flashlight",
-      "item.verity.flashlight": "flashlight",
+      "item.verity.flashlight": "Flashlight",
+      "subtitles.flashlight": "",
       "subtitles.hellosomeonethere": ""
     }
   },
@@ -1291,16 +1298,15 @@
     "files": [
       "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
       "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
-      "src/main/java/net/mcreator/verity/init/VerityModBlockEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModItems.java",
-      "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
-      "src/main/java/net/mcreator/verity/VerityMod.java",
+      "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",
       "src/main/java/net/mcreator/verity/init/VerityModSounds.java",
-      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
-      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
-      "src/main/resources/META-INF/mods.toml",
       "src/main/resources/assets/verity/sounds.json",
+      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
+      "src/main/java/net/mcreator/verity/VerityMod.java",
       "src/main/resources/pack.mcmeta"
     ]
   },
