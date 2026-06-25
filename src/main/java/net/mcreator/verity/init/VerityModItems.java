@@ -12,11 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
-import net.mcreator.verity.item.Veritiday2Item;
-import net.mcreator.verity.item.Veritiday1Item;
-import net.mcreator.verity.item.VeritiItem;
-import net.mcreator.verity.item.Veriti2Item;
-import net.mcreator.verity.item.FlashlightItem;
+import net.mcreator.verity.item.*;
 import net.mcreator.verity.VerityMod;
 
 public class VerityModItems {
@@ -34,6 +30,7 @@ public class VerityModItems {
 	public static final RegistryObject<Item> VERITYE_SPAWN_EGG;
 	public static final RegistryObject<Item> FLASHLIGHTBLOCK;
 	public static final RegistryObject<Item> FLASHLIGHT;
+	public static final RegistryObject<Item> FLASHLIGHTOFF;
 	static {
 		VERITY_SPAWN_EGG = REGISTRY.register("verity_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY, -256, -13261, new Item.Properties()));
 		VERITI = REGISTRY.register("veriti", VeritiItem::new);
@@ -48,6 +45,7 @@ public class VerityModItems {
 		VERITYE_SPAWN_EGG = REGISTRY.register("veritye_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITYE, -6710887, -256, new Item.Properties()));
 		FLASHLIGHTBLOCK = block(VerityModBlocks.FLASHLIGHTBLOCK);
 		FLASHLIGHT = REGISTRY.register("flashlight", FlashlightItem::new);
+		FLASHLIGHTOFF = REGISTRY.register("flashlightoff", FLASHLIGHTOFFItem::new);
 	}
 
 	// Start of user code block custom items

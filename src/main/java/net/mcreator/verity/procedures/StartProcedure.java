@@ -13,6 +13,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
+import net.mcreator.verity.init.VerityModItems;
 import net.mcreator.verity.init.VerityModGameRules;
 import net.mcreator.verity.init.VerityModBlocks;
 
@@ -35,6 +36,11 @@ public class StartProcedure {
 		if (world.getLevelData().getGameRules().getBoolean(VerityModGameRules.DONE) == false) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(VerityModBlocks.BOX.get()).copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(VerityModItems.FLASHLIGHTOFF.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

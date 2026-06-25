@@ -36,6 +36,7 @@
       "value": -256,
       "falpha": 0.0
     },
+    "spawnEggTexture": "",
     "creativeTabs": [
       {
         "value": "MISC"

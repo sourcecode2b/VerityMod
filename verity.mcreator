@@ -1047,6 +1047,153 @@
           "src/main/java/net/mcreator/verity/item/FlashlightItem.java"
         ]
       }
+    },
+    {
+      "name": "FlashlightblockOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightblock_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/FlashlightblockOnTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FlashlightRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlight_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/FlashlightRightclickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FLASHLIGHTOFFRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightoff_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/FLASHLIGHTOFFRightclickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FlashlightblockBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightblock_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/FlashlightblockBlockAddedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "BoxOnRandomClientDisplayTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "box_on_random_client_display_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/BoxOnRandomClientDisplayTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FLASHLIGHTOFF",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightoff",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/flashlightoff.json",
+          "src/main/java/net/mcreator/verity/item/FLASHLIGHTOFFItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1087,6 +1234,14 @@
       "name": "flashlight",
       "files": [
         "lesiakower-torch-turned-on-flashlight-click-457506"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "hellosomeonethere",
+      "files": [
+        "verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out"
       ],
       "category": "neutral",
       "subtitle": ""
@@ -1135,7 +1290,8 @@
       "entity.verity.veritye": "VERITY",
       "block.verity.flashlightblock": "Flashlightblock",
       "item.verity.flashlight": "Flashlight",
-      "subtitles.flashlight": ""
+      "subtitles.flashlight": "",
+      "subtitles.hellosomeonethere": ""
     }
   },
   "metadata": {

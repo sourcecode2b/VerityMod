@@ -41,10 +41,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 99,
     "onRightClickedInAir": {
-      "name": "FlashlightRightclicked"
-    },
-    "onItemInUseTick": {
-      "name": "FlashlightItemInHandTick"
+      "name": "FLASHLIGHTOFFRightclicked"
     },
     "enableRanged": false,
     "shootConstantly": false,
