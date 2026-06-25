@@ -22,25 +22,23 @@ import net.mcreator.verity.VerityMod;
 public class VerityModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, VerityMod.MODID);
 	public static final RegistryObject<EntityType<VerityEntity>> VERITY = register("verity",
-			EntityType.Builder.<VerityEntity>of(VerityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(VerityEntity::new)
-
-					.sized(0.6f, 0.7f));
+			EntityType.Builder.<VerityEntity>of(VerityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(VerityEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<Verity2Entity>> VERITY_2 = register("verity_2",
 			EntityType.Builder.<Verity2Entity>of(Verity2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(Verity2Entity::new)
 
-					.sized(1f, 1f));
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<Verity3Entity>> VERITY_3 = register("verity_3",
 			EntityType.Builder.<Verity3Entity>of(Verity3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(Verity3Entity::new)
 
-					.sized(0.6f, 0.7f));
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<Verity2moredaysEntity>> VERITY_2MOREDAYS = register("verity_2moredays",
 			EntityType.Builder.<Verity2moredaysEntity>of(Verity2moredaysEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(Verity2moredaysEntity::new)
 
-					.sized(0.7f, 0.4f));
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<Verity1moredaysEntity>> VERITY_1MOREDAYS = register("verity_1moredays",
 			EntityType.Builder.<Verity1moredaysEntity>of(Verity1moredaysEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(Verity1moredaysEntity::new)
 
-					.sized(0.6f, 0.7f));
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<VERITYEEntity>> VERITYE = register("veritye",
 			EntityType.Builder.<VERITYEEntity>of(VERITYEEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VERITYEEntity::new).fireImmune().sized(0.6f, 1.8f));
 

@@ -4,18 +4,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.OcelotModel;
 import net.minecraft.client.model.HierarchicalModel;
 
 import net.mcreator.verity.entity.Verity1moredaysEntity;
 import net.mcreator.verity.client.model.animations.verityAnimation;
+import net.mcreator.verity.client.model.Modelballofverity;
 
-public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, OcelotModel<Verity1moredaysEntity>> {
-	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/a-glossy-yellow-sphere-on-a-transparent-background-perfect-for-design-elements-png.png");
+public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, Modelballofverity<Verity1moredaysEntity>> {
+	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/evil.png");
 
 	public Verity1moredaysRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(ModelLayers.OCELOT)), 0.5f);
+		super(context, new AnimatedModel(context.bakeLayer(Modelballofverity.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
@@ -23,7 +22,7 @@ public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, 
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends OcelotModel<Verity1moredaysEntity> {
+	private static final class AnimatedModel extends Modelballofverity<Verity1moredaysEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<Verity1moredaysEntity>() {
 			@Override

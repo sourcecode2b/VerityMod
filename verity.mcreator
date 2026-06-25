@@ -1351,6 +1351,7 @@
     "files": [
       "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
       "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
+      "src/main/java/net/mcreator/verity/init/VerityModBlockEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModItems.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",
@@ -1360,7 +1361,8 @@
       "src/main/resources/META-INF/mods.toml",
       "src/main/java/net/mcreator/verity/init/VerityModModels.java",
       "src/main/java/net/mcreator/verity/VerityMod.java",
-      "src/main/resources/pack.mcmeta"
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/verity/network/VerityModVariables.java"
     ]
   },
   "foldersRoot": {

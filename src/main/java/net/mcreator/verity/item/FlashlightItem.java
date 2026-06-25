@@ -1,5 +1,16 @@
 package net.mcreator.verity.item;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
+
+import net.mcreator.verity.procedures.FlashlightRightclickedProcedure;
+import net.mcreator.verity.procedures.FlashlightItemInHandTickProcedure;
+
 public class FlashlightItem extends Item {
 	public FlashlightItem() {
 		super(new Item.Properties().stacksTo(1));

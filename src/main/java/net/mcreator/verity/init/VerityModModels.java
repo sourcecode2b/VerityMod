@@ -10,7 +10,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.verity.client.model.Modelveritymonster;
 import net.mcreator.verity.client.model.Modeltwodman;
-import net.mcreator.verity.client.model.ModelVeritygoodversion;
+import net.mcreator.verity.client.model.Modelballofverity;
 import net.mcreator.verity.client.model.ModelGoatman;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -20,6 +20,6 @@ public class VerityModModels {
 		event.registerLayerDefinition(Modeltwodman.LAYER_LOCATION, Modeltwodman::createBodyLayer);
 		event.registerLayerDefinition(Modelveritymonster.LAYER_LOCATION, Modelveritymonster::createBodyLayer);
 		event.registerLayerDefinition(ModelGoatman.LAYER_LOCATION, ModelGoatman::createBodyLayer);
-		event.registerLayerDefinition(ModelVeritygoodversion.LAYER_LOCATION, ModelVeritygoodversion::createBodyLayer);
+		event.registerLayerDefinition(Modelballofverity.LAYER_LOCATION, Modelballofverity::createBodyLayer);
 	}
 }
