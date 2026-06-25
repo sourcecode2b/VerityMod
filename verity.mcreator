@@ -1162,6 +1162,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1197,7 +1201,14 @@
       }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "boxopen",
+      "type": "blockstate",
+      "scope": "player_persistent",
+      "value": "Blocks.AIR.defaultBlockState()"
+    }
+  ],
   "sound_elements": [
     {
       "name": "voice1",
@@ -1241,6 +1252,14 @@
     },
     {
       "name": "hellosomeonethere",
+      "files": [
+        "verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "helloimabox",
       "files": [
         "verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out"
       ],
@@ -1293,7 +1312,8 @@
       "item.verity.flashlight": "flashlight",
       "subtitles.flashlight": "",
       "subtitles.hellosomeonethere": "",
-      "item.verity.flashlightoff": "flashlight"
+      "item.verity.flashlightoff": "flashlight",
+      "subtitles.helloimabox": ""
     }
   },
   "metadata": {
@@ -1309,6 +1329,7 @@
       "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
       "src/main/java/net/mcreator/verity/init/VerityModModels.java",
       "src/main/resources/META-INF/mods.toml",
+      "src/main/java/net/mcreator/verity/network/VerityModVariables.java",
       "src/main/resources/assets/verity/sounds.json",
       "src/main/resources/pack.mcmeta"
     ]

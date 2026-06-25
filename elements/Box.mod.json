@@ -91,24 +91,24 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": true,
-    "isCustomSoundType": false,
+    "isCustomSoundType": true,
     "soundOnStep": {
       "value": "WOOD"
     },
     "breakSound": {
-      "value": ""
+      "value": "ambient.basalt_deltas.additions"
     },
     "fallSound": {
-      "value": ""
+      "value": "CUSTOM:helloimabox"
     },
     "hitSound": {
-      "value": ""
+      "value": "CUSTOM:helloimabox"
     },
     "placeSound": {
-      "value": ""
+      "value": "CUSTOM:helloimabox"
     },
     "stepSound": {
-      "value": ""
+      "value": "ambient.basalt_deltas.additions"
     },
     "luminance": {
       "fixedValue": 0.0
@@ -139,9 +139,6 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "BoxOnBlockRightClicked"
-    },
-    "onTickUpdate": {
-      "name": "BoxOnRandomClientDisplayTick"
     },
     "onRandomUpdateEvent": {
       "name": "BoxOnRandomClientDisplayTick"

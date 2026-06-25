@@ -3,7 +3,8 @@
     "default": {
       "name": "default",
       "map": {
-        "0": "images_5_2"
+        "1": "texture_3",
+        "4": "texture_6"
       }
     }
   }

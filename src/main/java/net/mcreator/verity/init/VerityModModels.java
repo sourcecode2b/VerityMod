@@ -9,7 +9,6 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.verity.client.model.Modelveritymonster;
-import net.mcreator.verity.client.model.Modelverity;
 import net.mcreator.verity.client.model.Modeltwodman;
 import net.mcreator.verity.client.model.ModelGoatman;
 
@@ -17,7 +16,6 @@ import net.mcreator.verity.client.model.ModelGoatman;
 public class VerityModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-		event.registerLayerDefinition(Modelverity.LAYER_LOCATION, Modelverity::createBodyLayer);
 		event.registerLayerDefinition(Modeltwodman.LAYER_LOCATION, Modeltwodman::createBodyLayer);
 		event.registerLayerDefinition(Modelveritymonster.LAYER_LOCATION, Modelveritymonster::createBodyLayer);
 		event.registerLayerDefinition(ModelGoatman.LAYER_LOCATION, ModelGoatman::createBodyLayer);
