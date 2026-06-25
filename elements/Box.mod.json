@@ -93,7 +93,7 @@
     "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "WOOD"
     },
     "breakSound": {
       "value": ""

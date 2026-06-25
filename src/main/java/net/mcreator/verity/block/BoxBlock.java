@@ -28,7 +28,7 @@ public class BoxBlock extends Block {
 	private static final VoxelShape SHAPE = box(0, 0, 0, 16, 12, 16);
 
 	public BoxBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
