@@ -30,5 +30,13 @@
         "stream": true
       }
     ]
+  },
+  "flashlight": {
+    "sounds": [
+      {
+        "name": "verity:lesiakower-torch-turned-on-flashlight-click-457506",
+        "stream": false
+      }
+    ]
   }
 }
