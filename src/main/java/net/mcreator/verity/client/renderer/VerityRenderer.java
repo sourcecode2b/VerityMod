@@ -4,17 +4,18 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.model.OcelotModel;
 import net.minecraft.client.model.HierarchicalModel;
 
 import net.mcreator.verity.entity.VerityEntity;
 import net.mcreator.verity.client.model.animations.verityAnimation;
-import net.mcreator.verity.client.model.Modeltwodman;
 
-public class VerityRenderer extends MobRenderer<VerityEntity, Modeltwodman<VerityEntity>> {
-	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/sddefault__1_-removebg-preview_1.png");
+public class VerityRenderer extends MobRenderer<VerityEntity, OcelotModel<VerityEntity>> {
+	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/happy.png");
 
 	public VerityRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(Modeltwodman.LAYER_LOCATION)), 0.5f);
+		super(context, new AnimatedModel(context.bakeLayer(ModelLayers.OCELOT)), 0.5f);
 	}
 
 	@Override
@@ -22,7 +23,7 @@ public class VerityRenderer extends MobRenderer<VerityEntity, Modeltwodman<Verit
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends Modeltwodman<VerityEntity> {
+	private static final class AnimatedModel extends OcelotModel<VerityEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<VerityEntity>() {
 			@Override

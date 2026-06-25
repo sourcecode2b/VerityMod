@@ -37,7 +37,8 @@
   "item.verity.veritye_spawn_egg": "VERITY Spawn Egg",
   "entity.verity.veritye": "VERITY",
   "block.verity.flashlightblock": "Flashlightblock",
-  "item.verity.flashlight": "Flashlight",
+  "item.verity.flashlight": "flashlight",
   "subtitles.flashlight": "",
-  "subtitles.hellosomeonethere": ""
+  "subtitles.hellosomeonethere": "",
+  "item.verity.flashlightoff": "flashlight"
 }

@@ -1006,6 +1006,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/verity/blockstates/flashlightblock.json",
+          "src/main/java/net/mcreator/verity/block/entity/FlashlightblockBlockEntity.java",
           "src/main/resources/assets/verity/models/item/flashlightblock.json",
           "src/main/resources/assets/verity/models/block/flashlightblock.json",
           "src/main/java/net/mcreator/verity/block/FlashlightblockBlock.java",
@@ -1093,6 +1094,22 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -1115,6 +1132,22 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -1289,15 +1322,17 @@
       "item.verity.veritye_spawn_egg": "VERITY Spawn Egg",
       "entity.verity.veritye": "VERITY",
       "block.verity.flashlightblock": "Flashlightblock",
-      "item.verity.flashlight": "Flashlight",
+      "item.verity.flashlight": "flashlight",
       "subtitles.flashlight": "",
-      "subtitles.hellosomeonethere": ""
+      "subtitles.hellosomeonethere": "",
+      "item.verity.flashlightoff": "flashlight"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
       "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
+      "src/main/java/net/mcreator/verity/init/VerityModBlockEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModItems.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",

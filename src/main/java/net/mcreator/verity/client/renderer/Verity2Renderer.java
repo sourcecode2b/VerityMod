@@ -4,17 +4,18 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.GhastModel;
 
 import net.mcreator.verity.entity.Verity2Entity;
 import net.mcreator.verity.client.model.animations.verityAnimation;
-import net.mcreator.verity.client.model.Modeltwodman;
 
-public class Verity2Renderer extends MobRenderer<Verity2Entity, Modeltwodman<Verity2Entity>> {
-	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/sddefault__1_-removebg-preview_4.png");
+public class Verity2Renderer extends MobRenderer<Verity2Entity, GhastModel<Verity2Entity>> {
+	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/eviltalking.png");
 
 	public Verity2Renderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(Modeltwodman.LAYER_LOCATION)), 0.5f);
+		super(context, new AnimatedModel(context.bakeLayer(ModelLayers.GHAST)), 0.5f);
 	}
 
 	@Override
@@ -22,7 +23,7 @@ public class Verity2Renderer extends MobRenderer<Verity2Entity, Modeltwodman<Ver
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends Modeltwodman<Verity2Entity> {
+	private static final class AnimatedModel extends GhastModel<Verity2Entity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<Verity2Entity>() {
 			@Override

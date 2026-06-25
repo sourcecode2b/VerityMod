@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Verity",
     "mobLabel": "",
-    "mobModelName": "Modeltwodman",
-    "mobModelTexture": "sddefault__1_-removebg-preview_1.png",
+    "mobModelName": "Ocelot",
+    "mobModelTexture": "happy.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -36,7 +36,7 @@
       }
     ],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 0.7,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -48,6 +48,7 @@
       "value": -13261,
       "falpha": 0.0
     },
+    "spawnEggTexture": "",
     "creativeTabs": [
       {
         "value": "MISC"
