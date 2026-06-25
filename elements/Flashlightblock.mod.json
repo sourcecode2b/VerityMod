@@ -12,7 +12,7 @@
     "customModelName": "Normal",
     "rotationMode": 0,
     "enablePitch": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "states": [],
     "animations": [],
@@ -22,18 +22,18 @@
     "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 0.0,
-        "my": 0.0,
-        "mz": 0.0,
-        "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
+        "mx": 8.0,
+        "my": 8.0,
+        "mz": 8.0,
+        "Mx": 8.0,
+        "My": 8.0,
+        "Mz": 8.0,
         "subtract": false
       }
     ],
@@ -64,21 +64,24 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "hasCustomOpacity": true,
-    "lightOpacity": 0,
-    "tickRate": 0,
+    "lightOpacity": 15,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "AIR",
     "noteBlockInstrument": "harp",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
+    "aiPathNodeType": "OPEN",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -86,7 +89,7 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "IGNORE",
     "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
@@ -118,12 +121,12 @@
     "vibrationSensitivityRadius": {
       "fixedValue": 7.0
     },
-    "hasInventory": false,
+    "hasInventory": true,
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
-    "inventoryStackSize": 99,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventorySize": 0,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -134,6 +137,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "FlashlightblockBlockAdded"
+    },
+    "onTickUpdate": {
+      "name": "FlashlightblockOnTickUpdate"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

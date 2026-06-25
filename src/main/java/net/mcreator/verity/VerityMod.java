@@ -18,11 +18,7 @@ import net.minecraft.server.TickTask;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.verity.init.VerityModTabs;
-import net.mcreator.verity.init.VerityModSounds;
-import net.mcreator.verity.init.VerityModItems;
-import net.mcreator.verity.init.VerityModEntities;
-import net.mcreator.verity.init.VerityModBlocks;
+import net.mcreator.verity.init.*;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -47,6 +43,7 @@ public class VerityMod {
 		IEventBus bus = context.getModEventBus();
 		VerityModSounds.REGISTRY.register(bus);
 		VerityModBlocks.REGISTRY.register(bus);
+		VerityModBlockEntities.REGISTRY.register(bus);
 		VerityModItems.REGISTRY.register(bus);
 		VerityModEntities.REGISTRY.register(bus);
 		VerityModTabs.REGISTRY.register(bus);
