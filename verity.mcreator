@@ -8,9 +8,9 @@
       "registry_name": "verity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/verity/models/item/verity_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/entity/VerityEntity.java",
           "src/main/java/net/mcreator/verity/client/renderer/VerityRenderer.java",
-          "src/main/java/net/mcreator/verity/entity/VerityEntity.java"
+          "src/main/resources/assets/verity/models/item/verity_spawn_egg.json"
         ]
       }
     },
@@ -90,8 +90,8 @@
       "registry_name": "veriti",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/verity/item/VeritiItem.java",
-          "src/main/resources/assets/verity/models/item/veriti.json"
+          "src/main/resources/assets/verity/models/item/veriti.json",
+          "src/main/java/net/mcreator/verity/item/VeritiItem.java"
         ]
       }
     },
@@ -294,11 +294,11 @@
       "registry_name": "box",
       "metadata": {
         "files": [
+          "src/main/resources/assets/verity/blockstates/box.json",
           "src/main/resources/assets/verity/models/block/box.json",
-          "src/main/resources/data/verity/loot_tables/blocks/box.json",
           "src/main/java/net/mcreator/verity/block/BoxBlock.java",
           "src/main/resources/assets/verity/models/item/box.json",
-          "src/main/resources/assets/verity/blockstates/box.json"
+          "src/main/resources/data/verity/loot_tables/blocks/box.json"
         ]
       }
     },
@@ -437,9 +437,9 @@
       "registry_name": "verity_2moredays",
       "metadata": {
         "files": [
+          "src/main/resources/assets/verity/models/item/verity_2moredays_spawn_egg.json",
           "src/main/java/net/mcreator/verity/client/renderer/Verity2moredaysRenderer.java",
-          "src/main/java/net/mcreator/verity/entity/Verity2moredaysEntity.java",
-          "src/main/resources/assets/verity/models/item/verity_2moredays_spawn_egg.json"
+          "src/main/java/net/mcreator/verity/entity/Verity2moredaysEntity.java"
         ]
       }
     },
@@ -770,8 +770,8 @@
       "registry_name": "veritiday_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/verity/models/item/veritiday_2.json",
-          "src/main/java/net/mcreator/verity/item/Veritiday2Item.java"
+          "src/main/java/net/mcreator/verity/item/Veritiday2Item.java",
+          "src/main/resources/assets/verity/models/item/veritiday_2.json"
         ]
       }
     },
@@ -839,8 +839,8 @@
       "registry_name": "veritiday_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/verity/item/Veritiday1Item.java",
-          "src/main/resources/assets/verity/models/item/veritiday_1.json"
+          "src/main/resources/assets/verity/models/item/veritiday_1.json",
+          "src/main/java/net/mcreator/verity/item/Veritiday1Item.java"
         ]
       }
     },
@@ -942,9 +942,9 @@
       "registry_name": "veritye",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java",
           "src/main/java/net/mcreator/verity/client/renderer/VERITYERenderer.java",
-          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json"
+          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java"
         ]
       }
     },
@@ -1006,10 +1006,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/verity/blockstates/flashlightblock.json",
-          "src/main/resources/assets/verity/models/item/flashlightblock.json",
           "src/main/resources/assets/verity/models/block/flashlightblock.json",
+          "src/main/resources/data/verity/loot_tables/blocks/flashlightblock.json",
           "src/main/java/net/mcreator/verity/block/FlashlightblockBlock.java",
-          "src/main/resources/data/verity/loot_tables/blocks/flashlightblock.json"
+          "src/main/resources/assets/verity/models/item/flashlightblock.json",
+          "src/main/java/net/mcreator/verity/block/entity/FlashlightblockBlockEntity.java"
         ]
       }
     },
@@ -1043,15 +1044,15 @@
       "registry_name": "flashlight",
       "metadata": {
         "files": [
-          "src/main/resources/assets/verity/models/item/flashlight.json",
-          "src/main/java/net/mcreator/verity/item/FlashlightItem.java"
+          "src/main/java/net/mcreator/verity/item/FlashlightItem.java",
+          "src/main/resources/assets/verity/models/item/flashlight.json"
         ]
       }
     },
     {
       "name": "FlashlightblockOnTickUpdate",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "flashlightblock_on_tick_update",
       "metadata": {
@@ -1081,7 +1082,7 @@
     {
       "name": "FlashlightRightclicked",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "flashlight_rightclicked",
       "metadata": {
@@ -1103,7 +1104,7 @@
     {
       "name": "FLASHLIGHTOFFRightclicked",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "flashlightoff_rightclicked",
       "metadata": {
@@ -1125,7 +1126,7 @@
     {
       "name": "FlashlightblockBlockAdded",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "flashlightblock_block_added",
       "metadata": {
@@ -1185,13 +1186,13 @@
     {
       "name": "FLASHLIGHTOFF",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "flashlightoff",
       "metadata": {
         "files": [
-          "src/main/resources/assets/verity/models/item/flashlightoff.json",
-          "src/main/java/net/mcreator/verity/item/FLASHLIGHTOFFItem.java"
+          "src/main/java/net/mcreator/verity/item/FLASHLIGHTOFFItem.java",
+          "src/main/resources/assets/verity/models/item/flashlightoff.json"
         ]
       }
     }
@@ -1289,9 +1290,10 @@
       "item.verity.veritye_spawn_egg": "VERITY Spawn Egg",
       "entity.verity.veritye": "VERITY",
       "block.verity.flashlightblock": "Flashlightblock",
-      "item.verity.flashlight": "Flashlight",
+      "item.verity.flashlight": "flashlight",
       "subtitles.flashlight": "",
-      "subtitles.hellosomeonethere": ""
+      "subtitles.hellosomeonethere": "",
+      "item.verity.flashlightoff": "flashlight"
     }
   },
   "metadata": {

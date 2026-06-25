@@ -1,9 +1,6 @@
 {
-  "parent": "verity:custom/flashlight",
+  "parent": "item/generated",
   "textures": {
-    "1": "verity:block/texture",
-    "2": "verity:block/texture_1",
-    "3": "verity:block/texture_2",
-    "particle": "verity:item/flashlight_item_texture"
+    "layer0": "verity:item/flashlight"
   }
 }

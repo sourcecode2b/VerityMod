@@ -5,7 +5,8 @@
       "map": {
         "1": "texture",
         "2": "texture_1",
-        "3": "texture_2"
+        "3": "texture_1",
+        "4": "minecraft:red_concrete"
       }
     }
   }

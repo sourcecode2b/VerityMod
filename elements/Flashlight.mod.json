@@ -2,9 +2,9 @@
   "_fv": 85,
   "_type": "item",
   "definition": {
-    "renderType": 1,
-    "texture": "flashlight_item_texture",
-    "customModelName": "flashlight:default",
+    "renderType": 0,
+    "texture": "flashlight",
+    "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
