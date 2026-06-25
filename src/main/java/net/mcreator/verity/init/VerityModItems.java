@@ -29,8 +29,8 @@ public class VerityModItems {
 	public static final RegistryObject<Item> VERITIDAY_1;
 	public static final RegistryObject<Item> VERITYE_SPAWN_EGG;
 	public static final RegistryObject<Item> FLASHLIGHTBLOCK;
-	public static final RegistryObject<Item> FLASHLIGHTOFF;
 	public static final RegistryObject<Item> FLASHLIGHT;
+	public static final RegistryObject<Item> FLASHLIGHTOFF;
 	static {
 		VERITY_SPAWN_EGG = REGISTRY.register("verity_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY, -256, -13261, new Item.Properties()));
 		VERITI = REGISTRY.register("veriti", VeritiItem::new);
@@ -44,8 +44,8 @@ public class VerityModItems {
 		VERITIDAY_1 = REGISTRY.register("veritiday_1", Veritiday1Item::new);
 		VERITYE_SPAWN_EGG = REGISTRY.register("veritye_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITYE, -6710887, -256, new Item.Properties()));
 		FLASHLIGHTBLOCK = block(VerityModBlocks.FLASHLIGHTBLOCK);
-		FLASHLIGHTOFF = REGISTRY.register("flashlightoff", FLASHLIGHTOFFItem::new);
 		FLASHLIGHT = REGISTRY.register("flashlight", FlashlightItem::new);
+		FLASHLIGHTOFF = REGISTRY.register("flashlightoff", FLASHLIGHTOFFItem::new);
 	}
 
 	// Start of user code block custom items

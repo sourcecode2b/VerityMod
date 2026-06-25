@@ -1051,7 +1051,7 @@
     {
       "name": "FlashlightblockOnTickUpdate",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "flashlightblock_on_tick_update",
       "metadata": {
@@ -1081,7 +1081,7 @@
     {
       "name": "FlashlightRightclicked",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "flashlight_rightclicked",
       "metadata": {
@@ -1103,7 +1103,7 @@
     {
       "name": "FLASHLIGHTOFFRightclicked",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "flashlightoff_rightclicked",
       "metadata": {
@@ -1125,7 +1125,7 @@
     {
       "name": "FlashlightblockBlockAdded",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "flashlightblock_block_added",
       "metadata": {
@@ -1185,7 +1185,7 @@
     {
       "name": "FLASHLIGHTOFF",
       "type": "item",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "flashlightoff",
       "metadata": {
@@ -1298,15 +1298,16 @@
     "files": [
       "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
       "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
+      "src/main/java/net/mcreator/verity/init/VerityModBlockEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModItems.java",
-      "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",
-      "src/main/java/net/mcreator/verity/init/VerityModSounds.java",
-      "src/main/resources/assets/verity/sounds.json",
-      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
-      "src/main/resources/META-INF/mods.toml",
-      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
+      "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/VerityMod.java",
+      "src/main/java/net/mcreator/verity/init/VerityModSounds.java",
+      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
+      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/resources/assets/verity/sounds.json",
       "src/main/resources/pack.mcmeta"
     ]
   },
