@@ -1194,6 +1194,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1229,7 +1233,14 @@
       }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "boxopen",
+      "type": "blockstate",
+      "scope": "player_persistent",
+      "value": "Blocks.AIR.defaultBlockState()"
+    }
+  ],
   "sound_elements": [
     {
       "name": "voice1",
@@ -1273,6 +1284,14 @@
     },
     {
       "name": "hellosomeonethere",
+      "files": [
+        "verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "helloimabox",
       "files": [
         "verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out"
       ],
@@ -1332,7 +1351,6 @@
     "files": [
       "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
       "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
-      "src/main/java/net/mcreator/verity/init/VerityModBlockEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModItems.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",

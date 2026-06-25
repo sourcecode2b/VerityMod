@@ -1,28 +1,6 @@
 package net.mcreator.verity.block;
 
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.verity.procedures.FlashlightblockOnTickUpdateProcedure;
-import net.mcreator.verity.procedures.FlashlightblockBlockAddedProcedure;
-import net.mcreator.verity.block.entity.FlashlightblockBlockEntity;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 public class FlashlightblockBlock extends Block implements EntityBlock {
 	private static final VoxelShape SHAPE = Shapes.empty();

@@ -1,5 +1,7 @@
 package net.mcreator.verity.block;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -9,7 +11,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
@@ -17,9 +18,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.verity.procedures.BoxOnRandomClientDisplayTickProcedure;
 import net.mcreator.verity.procedures.BoxOnBlockRightClickedProcedure;
@@ -28,7 +30,11 @@ public class BoxBlock extends Block {
 	private static final VoxelShape SHAPE = box(0, 0, 0, 16, 12, 16);
 
 	public BoxBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of()
+				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.basalt_deltas.additions")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("verity:helloimabox")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("verity:helloimabox")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("verity:helloimabox"))))
+				.strength(1f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -52,19 +58,10 @@ public class BoxBlock extends Block {
 	}
 
 	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
-		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		BoxOnRandomClientDisplayTickProcedure.execute(world, x, y, z);
-	}
-
-	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void animateTick(BlockState blockstate, Level world, BlockPos pos, RandomSource random) {
 		super.animateTick(blockstate, world, pos, random);
-		BoxOnRandomClientDisplayTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		BoxOnRandomClientDisplayTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), Minecraft.getInstance().player);
 	}
 
 	@Override
