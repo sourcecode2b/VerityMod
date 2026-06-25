@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "verity:block/images_5_2",
+    "up": "verity:block/images_5_2",
+    "north": "verity:block/images_5_1",
+    "east": "verity:block/images_5_2",
+    "south": "verity:block/images_5_2",
+    "west": "verity:block/images_5_2",
+    "particle": "verity:block/images_5_2"
+  },
+  "render_type": "cutout"
+}

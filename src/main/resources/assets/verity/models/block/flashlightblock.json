@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "verity:block/1280px-hd_transparent_picture",
+    "up": "verity:block/1280px-hd_transparent_picture",
+    "north": "verity:block/1280px-hd_transparent_picture",
+    "east": "verity:block/1280px-hd_transparent_picture",
+    "south": "verity:block/1280px-hd_transparent_picture",
+    "west": "verity:block/1280px-hd_transparent_picture",
+    "particle": "verity:block/1280px-hd_transparent_picture"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,1169 @@
+{
+  "mod_elements": [
+    {
+      "name": "Verity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/verity_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/client/renderer/VerityRenderer.java",
+          "src/main/java/net/mcreator/verity/entity/VerityEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "VerityOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VerityOnInitialEntitySpawnProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VeritiRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriti_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VeritiRightclickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veriti",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriti",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/item/VeritiItem.java",
+          "src/main/resources/assets/verity/models/item/veriti.json"
+        ]
+      }
+    },
+    {
+      "name": "VerityRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VerityRightClickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VerityPlaybackCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_playback_condition",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VerityPlaybackConditionProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Disturbed1",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disturbed_1",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Phase2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phase_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Phase2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/entity/Verity2Entity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/Verity2Renderer.java",
+          "src/main/resources/assets/verity/models/item/verity_2_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Verity2OnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2OnInitialEntitySpawnProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2RightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2RightClickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity3",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/entity/Verity3Entity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/Verity3Renderer.java",
+          "src/main/resources/assets/verity/models/item/verity_3_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Verity3RightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_3_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity3RightClickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Done",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "done",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "BoxOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "box_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/BoxOnBlockRightClickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Box",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "box",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/block/box.json",
+          "src/main/resources/data/verity/loot_tables/blocks/box.json",
+          "src/main/java/net/mcreator/verity/block/BoxBlock.java",
+          "src/main/resources/assets/verity/models/item/box.json",
+          "src/main/resources/assets/verity/blockstates/box.json"
+        ]
+      }
+    },
+    {
+      "name": "Start",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/StartProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veriti2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriti_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/item/Veriti2Item.java",
+          "src/main/resources/assets/verity/models/item/veriti_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Verity2RiyhtyghtClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2_riyhtyght_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2RiyhtyghtClickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veriti2RightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veriti_2_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Veriti2RightclickedOnBlockProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TDayslefttrrew",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_dayslefttrrew",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/client/screens/TDayslefttrrewOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "TDayslefttrrew2",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_dayslefttrrew_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/client/screens/TDayslefttrrew2Overlay.java"
+        ]
+      }
+    },
+    {
+      "name": "TDayslefttrrew21",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_dayslefttrrew_21",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/client/screens/TDayslefttrrew21Overlay.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2moredays",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2moredays",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/client/renderer/Verity2moredaysRenderer.java",
+          "src/main/java/net/mcreator/verity/entity/Verity2moredaysEntity.java",
+          "src/main/resources/assets/verity/models/item/verity_2moredays_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Verity1moredays",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_1moredays",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/entity/Verity1moredaysEntity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/Verity1moredaysRenderer.java",
+          "src/main/resources/assets/verity/models/item/verity_1moredays_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Daysthreww",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daysthreww",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Daysthreww2",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daysthreww_2",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Daysthreww1",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daysthreww_1",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Spawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/SpawnProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/CheckProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2OnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2OnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2moredaysOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2moredays_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2moredaysOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Monstertime",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monstertime",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "VerityOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VerityOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity1moredaysOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_1moredays_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity1moredaysOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TDayslefttrrewDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_dayslefttrrew_display_overlay_ingame",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/TDayslefttrrewDisplayOverlayIngameProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TDayslefttrrew2DisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_dayslefttrrew_2_display_overlay_ingame",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/TDayslefttrrew2DisplayOverlayIngameProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TDayslefttrrew21DisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_dayslefttrrew_21_display_overlay_ingame",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/TDayslefttrrew21DisplayOverlayIngameProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veritiday2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritiday_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/veritiday_2.json",
+          "src/main/java/net/mcreator/verity/item/Veritiday2Item.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2moredaysRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2moredays_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2moredaysRightClickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veritiday2RightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritiday_2_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Veritiday2RightclickedOnBlockProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veritiday1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritiday_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/item/Veritiday1Item.java",
+          "src/main/resources/assets/verity/models/item/veritiday_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Veritiday1RightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritiday_1_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Veritiday1RightclickedOnBlockProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity1moredaysRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_1moredays_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity1moredaysRightClickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ITSHERE",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itshere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/client/screens/ITSHEREOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "VERITYEOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritye_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VERITYEOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VERITYE",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritye",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/VERITYERenderer.java",
+          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Checktest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "checktest",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/ChecktestProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ITSHEREDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itshere_display_overlay_ingame",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/ITSHEREDisplayOverlayIngameProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Flashlightblock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlightblock",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/blockstates/flashlightblock.json",
+          "src/main/resources/assets/verity/models/item/flashlightblock.json",
+          "src/main/resources/assets/verity/models/block/flashlightblock.json",
+          "src/main/java/net/mcreator/verity/block/FlashlightblockBlock.java",
+          "src/main/resources/data/verity/loot_tables/blocks/flashlightblock.json"
+        ]
+      }
+    },
+    {
+      "name": "FlashlightItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlight_item_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/FlashlightItemInHandTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Flashlight",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlight",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/flashlight.json",
+          "src/main/java/net/mcreator/verity/item/FlashlightItem.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "voice1",
+      "files": [
+        "verity-_your-personal-helper-friend_-made-with-voicemod"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "voice2",
+      "files": [
+        "verity-_something-is-coming-in-3-days_-made-with-voicemod"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "yeah",
+      "files": [
+        "verity-_yeahh___-made-with-voicemod"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "music",
+      "files": [
+        "my-gal-verity-made-with-voicemod"
+      ],
+      "category": "music",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "entity.verity.verity": "Verity",
+      "item.verity.verity_spawn_egg": "Verity Spawn Egg",
+      "item.verity.veriti": "Verity",
+      "item.verity.veriti.description_0": "right click to spawn him!",
+      "gamerule.disturbed1": "phase2",
+      "gamerule.disturbed1.description": "67",
+      "entity.verity.verity_2": "Verity",
+      "item.verity.verity_2_spawn_egg": "Verity Spawn Egg",
+      "entity.verity.verity_3": "Verity",
+      "item.verity.verity_3_spawn_egg": "Verity Spawn Egg",
+      "subtitles.voice1": "",
+      "subtitles.voice2": "",
+      "gamerule.done": "voice1",
+      "gamerule.done.description": "67",
+      "subtitles.yeah": "",
+      "block.verity.box": "Box",
+      "item.verity.veriti_2": "Verity",
+      "item.verity.veriti_2.description_0": "right click to spawn him!",
+      "item.verity.verity_2moredays_spawn_egg": "Verity Spawn Egg",
+      "entity.verity.verity_2moredays": "Verity",
+      "entity.verity.verity_1moredays": "Verity",
+      "item.verity.verity_1moredays_spawn_egg": "Verity Spawn Egg",
+      "gamerule.daysthreww.description": "left",
+      "gamerule.daysthreww": "3days",
+      "gamerule.daysthreww2.description": "left",
+      "gamerule.daysthreww2": "2days",
+      "gamerule.daysthreww1": "1days",
+      "gamerule.daysthreww1.description": "left",
+      "gamerule.monstertime.description": "HERE",
+      "gamerule.monstertime": "MONSTER",
+      "subtitles.music": "",
+      "item.verity.veritiday_2": "Verity",
+      "item.verity.veritiday_2.description_0": "right click to spawn him!",
+      "item.verity.veritiday_1.description_0": "right click to spawn him!",
+      "item.verity.veritiday_1": "Verity",
+      "item.verity.veritye_spawn_egg": "VERITY Spawn Egg",
+      "entity.verity.veritye": "VERITY",
+      "block.verity.flashlightblock": "Flashlightblock",
+      "item.verity.flashlight": "Flashlight"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
+      "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
+      "src/main/java/net/mcreator/verity/init/VerityModItems.java",
+      "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
+      "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",
+      "src/main/java/net/mcreator/verity/init/VerityModSounds.java",
+      "src/main/resources/assets/verity/sounds.json",
+      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
+      "src/main/java/net/mcreator/verity/VerityMod.java",
+      "src/main/resources/pack.mcmeta"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "verity",
+    "modName": "verity",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.verity"
+  },
+  "mcreatorVersion": 202600114619
+}

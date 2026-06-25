@@ -1,0 +1,34 @@
+{
+  "voice1": {
+    "sounds": [
+      {
+        "name": "verity:verity-_your-personal-helper-friend_-made-with-voicemod",
+        "stream": false
+      }
+    ]
+  },
+  "voice2": {
+    "sounds": [
+      {
+        "name": "verity:verity-_something-is-coming-in-3-days_-made-with-voicemod",
+        "stream": false
+      }
+    ]
+  },
+  "yeah": {
+    "sounds": [
+      {
+        "name": "verity:verity-_yeahh___-made-with-voicemod",
+        "stream": false
+      }
+    ]
+  },
+  "music": {
+    "sounds": [
+      {
+        "name": "verity:my-gal-verity-made-with-voicemod",
+        "stream": true
+      }
+    ]
+  }
+}
