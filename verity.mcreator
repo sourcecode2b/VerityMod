@@ -294,11 +294,11 @@
       "registry_name": "box",
       "metadata": {
         "files": [
+          "src/main/resources/assets/verity/blockstates/box.json",
           "src/main/resources/assets/verity/models/block/box.json",
-          "src/main/resources/data/verity/loot_tables/blocks/box.json",
           "src/main/java/net/mcreator/verity/block/BoxBlock.java",
           "src/main/resources/assets/verity/models/item/box.json",
-          "src/main/resources/assets/verity/blockstates/box.json"
+          "src/main/resources/data/verity/loot_tables/blocks/box.json"
         ]
       }
     },
@@ -1134,14 +1134,14 @@
       "src/main/java/net/mcreator/verity/init/VerityModGameRules.java",
       "src/main/java/net/mcreator/verity/init/VerityModBlocks.java",
       "src/main/java/net/mcreator/verity/init/VerityModItems.java",
-      "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/init/VerityModEntityRenderers.java",
-      "src/main/java/net/mcreator/verity/init/VerityModSounds.java",
-      "src/main/resources/assets/verity/sounds.json",
-      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
-      "src/main/resources/META-INF/mods.toml",
-      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
+      "src/main/java/net/mcreator/verity/init/VerityModEntities.java",
       "src/main/java/net/mcreator/verity/VerityMod.java",
+      "src/main/java/net/mcreator/verity/init/VerityModSounds.java",
+      "src/main/java/net/mcreator/verity/init/VerityModTabs.java",
+      "src/main/java/net/mcreator/verity/init/VerityModModels.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/resources/assets/verity/sounds.json",
       "src/main/resources/pack.mcmeta"
     ]
   },
