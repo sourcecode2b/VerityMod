@@ -30,5 +30,13 @@
         "stream": true
       }
     ]
+  },
+  "hellosomeonethere": {
+    "sounds": [
+      {
+        "name": "verity:verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out",
+        "stream": false
+      }
+    ]
   }
 }

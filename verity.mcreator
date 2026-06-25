@@ -942,9 +942,9 @@
       "registry_name": "veritye",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java",
           "src/main/java/net/mcreator/verity/client/renderer/VERITYERenderer.java",
-          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json"
+          "src/main/resources/assets/verity/models/item/veritye_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/entity/VERITYEEntity.java"
         ]
       }
     },
@@ -1165,6 +1165,36 @@
           "src/main/java/net/mcreator/verity/procedures/FLASHLIGHTOFFRightclickedProcedure.java"
         ]
       }
+    },
+    {
+      "name": "BoxOnRandomClientDisplayTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "box_on_random_client_display_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/BoxOnRandomClientDisplayTickProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1199,6 +1229,14 @@
         "my-gal-verity-made-with-voicemod"
       ],
       "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "hellosomeonethere",
+      "files": [
+        "verity-2026-06-24-21-34-hello-someone-there-hello-let-me-out"
+      ],
+      "category": "neutral",
       "subtitle": ""
     }
   ],
@@ -1245,7 +1283,8 @@
       "entity.verity.veritye": "VERITY",
       "block.verity.flashlightblock": "Flashlightblock",
       "item.verity.flashlightoff": "flashlight",
-      "item.verity.flashlight": "flashlight"
+      "item.verity.flashlight": "flashlight",
+      "subtitles.hellosomeonethere": ""
     }
   },
   "metadata": {

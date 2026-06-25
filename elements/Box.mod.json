@@ -140,6 +140,12 @@
     "onRightClicked": {
       "name": "BoxOnBlockRightClicked"
     },
+    "onTickUpdate": {
+      "name": "BoxOnRandomClientDisplayTick"
+    },
+    "onRandomUpdateEvent": {
+      "name": "BoxOnRandomClientDisplayTick"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
