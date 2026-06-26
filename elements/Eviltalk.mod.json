@@ -1,0 +1,12 @@
+{
+  "_fv": 85,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "eviltalk",
+    "description": "talk",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

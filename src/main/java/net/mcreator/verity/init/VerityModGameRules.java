@@ -15,4 +15,6 @@ public class VerityModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> DAYSTHREWW_2 = GameRules.register("daysthreww2", GameRules.Category.SPAWNING, GameRules.BooleanValue.create(false));
 	public static final GameRules.Key<GameRules.BooleanValue> DAYSTHREWW_1 = GameRules.register("daysthreww1", GameRules.Category.SPAWNING, GameRules.BooleanValue.create(false));
 	public static final GameRules.Key<GameRules.BooleanValue> MONSTERTIME = GameRules.register("monstertime", GameRules.Category.SPAWNING, GameRules.BooleanValue.create(false));
+	public static final GameRules.Key<GameRules.BooleanValue> EVILTALK = GameRules.register("eviltalk", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
+	public static final GameRules.Key<GameRules.BooleanValue> NORMALTALK = GameRules.register("normaltalk", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
 }

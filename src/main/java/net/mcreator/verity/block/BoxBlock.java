@@ -27,14 +27,14 @@ import net.mcreator.verity.procedures.BoxOnRandomClientDisplayTickProcedure;
 import net.mcreator.verity.procedures.BoxOnBlockRightClickedProcedure;
 
 public class BoxBlock extends Block {
-	private static final VoxelShape SHAPE = box(0, 0, 0, 16, 12, 16);
+	private static final VoxelShape SHAPE = box(0, 0, 0, 16, 14, 16);
 
 	public BoxBlock() {
 		super(BlockBehaviour.Properties.of()
 				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.basalt_deltas.additions")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("verity:helloimabox")),
 						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("verity:helloimabox")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("verity:helloimabox"))))
-				.strength(1f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
+				.strength(-1, 3600000).noCollission().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

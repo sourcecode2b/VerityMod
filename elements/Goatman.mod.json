@@ -2,10 +2,10 @@
   "_fv": 85,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Verity",
-    "mobLabel": "Verity",
-    "mobModelName": "Modelballofverity",
-    "mobModelTexture": "evil.png",
+    "mobName": "Goatman",
+    "mobLabel": "",
+    "mobModelName": "ModelGoatman",
+    "mobModelTexture": "is-anyone-interested-in-making-a-twixxels-stalker-3d-v0-pjo5soiqsm8h1_1.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -22,30 +22,18 @@
       "fixedValue": 1.0
     },
     "modelLayers": [],
-    "animations": [
-      {
-        "animation": {
-          "value": "CUSTOM:verityAnimation.bounce"
-        },
-        "speed": 1.5,
-        "condition": {
-          "name": "VerityPlaybackCondition"
-        },
-        "walking": false,
-        "amplitude": 1.0
-      }
-    ],
+    "animations": [],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -256,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -13261,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggTexture": "",
@@ -77,14 +65,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 8,
+    "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.0,
+    "movementSpeed": 0.3,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
-    "trackingRange": 300,
-    "followRange": 300,
+    "trackingRange": 64,
+    "followRange": 16,
     "health": 10,
     "xpAmount": 0,
     "waterMob": false,
@@ -101,19 +89,19 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
-    "immuneToArrows": false,
-    "immuneToFallDamage": false,
-    "immuneToCactus": false,
-    "immuneToDrowning": false,
-    "immuneToLightning": false,
-    "immuneToPotions": false,
-    "immuneToPlayer": false,
-    "immuneToExplosion": false,
-    "immuneToTrident": false,
-    "immuneToAnvil": false,
-    "immuneToWither": false,
-    "immuneToDragonBreath": false,
+    "immuneToFire": true,
+    "immuneToArrows": true,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
+    "immuneToDrowning": true,
+    "immuneToLightning": true,
+    "immuneToPotions": true,
+    "immuneToPlayer": true,
+    "immuneToExplosion": true,
+    "immuneToTrident": true,
+    "immuneToAnvil": true,
+    "immuneToWither": true,
+    "immuneToDragonBreath": true,
     "mobDrop": {
       "value": ""
     },
@@ -133,15 +121,12 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onRightClickedOn": {
-      "name": "Verity3RightClickedOnEntity"
-    },
-    "onInitialSpawn": {
-      "name": "Verity2OnInitialEntitySpawn"
+    "onMobTickUpdate": {
+      "name": "GoatmanOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">200</field><field name=\"followarea\">200</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">200</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">200</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">200</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">200</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">200</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">200</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -152,17 +137,13 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 6,
+    "spawningProbability": 14,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
-    "restrictionBiomes": [
-      {
-        "value": "#minecraft:is_overworld"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

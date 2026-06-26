@@ -16,9 +16,11 @@ public class VerityModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(VerityModEntities.VERITY.get(), VerityRenderer::new);
 		event.registerEntityRenderer(VerityModEntities.VERITY_2.get(), Verity2Renderer::new);
-		event.registerEntityRenderer(VerityModEntities.VERITY_3.get(), Verity3Renderer::new);
 		event.registerEntityRenderer(VerityModEntities.VERITY_2MOREDAYS.get(), Verity2moredaysRenderer::new);
 		event.registerEntityRenderer(VerityModEntities.VERITY_1MOREDAYS.get(), Verity1moredaysRenderer::new);
 		event.registerEntityRenderer(VerityModEntities.VERITYE.get(), VERITYERenderer::new);
+		event.registerEntityRenderer(VerityModEntities.VERITY_2NOTTALKING.get(), Verity2nottalkingRenderer::new);
+		event.registerEntityRenderer(VerityModEntities.GOATMAN.get(), GoatmanRenderer::new);
+		event.registerEntityRenderer(VerityModEntities.VERITYTALKING.get(), VeritytalkingRenderer::new);
 	}
 }

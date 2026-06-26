@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "verity:item/sddefault__1_-removebg-preview"
+    "layer0": "verity:item/default_sleep_0"
   }
 }

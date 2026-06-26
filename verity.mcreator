@@ -219,20 +219,6 @@
       }
     },
     {
-      "name": "Verity3",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "verity_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/verity/entity/Verity3Entity.java",
-          "src/main/java/net/mcreator/verity/client/renderer/Verity3Renderer.java",
-          "src/main/resources/assets/verity/models/item/verity_3_spawn_egg.json"
-        ]
-      }
-    },
-    {
       "name": "Verity3RightClickedOnEntity",
       "type": "procedure",
       "compiles": true,
@@ -1231,6 +1217,298 @@
           "src/main/java/net/mcreator/verity/item/FLASHLIGHTOFFItem.java"
         ]
       }
+    },
+    {
+      "name": "Eviltalk",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eviltalk",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Verity2nottalking",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2nottalking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/client/renderer/Verity2nottalkingRenderer.java",
+          "src/main/resources/assets/verity/models/item/verity_2nottalking_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/entity/Verity2nottalkingEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "VeritytalkevilOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritytalkevil_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VeritytalkevilOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veritiday3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritiday_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/veritiday_3.json",
+          "src/main/java/net/mcreator/verity/item/Veritiday3Item.java"
+        ]
+      }
+    },
+    {
+      "name": "Verity2morzsedaysRightclickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_2morzsedays_rightclicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity2morzsedaysRightclickedOnEntityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Veritiday3Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritiday_3_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Veritiday3RightclickedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cantsleep",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cantsleep",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/CantsleepProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GoatmanOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goatman_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/GoatmanOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Goatman",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goatman",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/goatman_spawn_egg.json",
+          "src/main/resources/data/verity/forge/biome_modifier/goatman_biome_modifier.json",
+          "src/main/java/net/mcreator/verity/client/renderer/GoatmanRenderer.java",
+          "src/main/java/net/mcreator/verity/entity/GoatmanEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Follow",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/item/FollowItem.java",
+          "src/main/resources/assets/verity/models/item/follow.json"
+        ]
+      }
+    },
+    {
+      "name": "Veritytalking",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritytalking",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/veritytalking_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/entity/VeritytalkingEntity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/VeritytalkingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "Normaltalk",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "normaltalk",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "VeritytalkingOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritytalking_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VeritytalkingOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "VeritytalkingOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veritytalking_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/VeritytalkingOnInitialEntitySpawnProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1311,8 +1589,6 @@
       "gamerule.disturbed1.description": "67",
       "entity.verity.verity_2": "Verity",
       "item.verity.verity_2_spawn_egg": "Verity Spawn Egg",
-      "entity.verity.verity_3": "Verity",
-      "item.verity.verity_3_spawn_egg": "Verity Spawn Egg",
       "subtitles.voice1": "",
       "subtitles.voice2": "",
       "gamerule.done": "voice1",
@@ -1344,7 +1620,21 @@
       "item.verity.flashlight": "flashlight",
       "subtitles.flashlight": "",
       "subtitles.hellosomeonethere": "",
-      "item.verity.flashlightoff": "flashlight"
+      "item.verity.flashlightoff": "flashlight",
+      "gamerule.eviltalk.description": "talk",
+      "gamerule.eviltalk": "eviltalk",
+      "item.verity.verity_2nottalking_spawn_egg": "Verity Spawn Egg",
+      "entity.verity.verity_2nottalking": "Verity",
+      "item.verity.veritiday_3": "Verity",
+      "item.verity.veritiday_3.description_0": "right click to spawn him!",
+      "item.verity.goatman_spawn_egg": "Goatman Spawn Egg",
+      "entity.verity.goatman": "Goatman",
+      "item.verity.follow": "Follow",
+      "item.verity.follow.description_0": "makes the ball follow you!",
+      "item.verity.veritytalking_spawn_egg": "Verity Spawn Egg",
+      "entity.verity.veritytalking": "Verity",
+      "gamerule.normaltalk": "talk",
+      "gamerule.normaltalk.description": "3"
     }
   },
   "metadata": {

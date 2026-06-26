@@ -6,17 +6,14 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
-import net.minecraft.world.entity.ai.goal.FollowMobGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
@@ -35,6 +32,7 @@ import net.mcreator.verity.procedures.VerityRightClickedOnEntityProcedure;
 import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.procedures.VerityOnInitialEntitySpawnProcedure;
 import net.mcreator.verity.procedures.VerityOnEntityTickUpdateProcedure;
+import net.mcreator.verity.init.VerityModItems;
 import net.mcreator.verity.init.VerityModEntities;
 
 import javax.annotation.Nullable;
@@ -48,7 +46,7 @@ public class VerityEntity extends Monster {
 
 	public VerityEntity(EntityType<VerityEntity> type, Level world) {
 		super(type, world);
-		setMaxUpStep(0.6f);
+		setMaxUpStep(10f);
 		xpReward = 0;
 		setNoAi(false);
 		setPersistenceRequired();
@@ -62,17 +60,12 @@ public class VerityEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowMobGoal(this, 1, (float) 200, (float) 200));
+		this.goalSelector.addGoal(1, new TemptGoal(this, 1000, Ingredient.of(VerityModItems.FOLLOW.get()), false));
 		this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, (float) 200));
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
-			}
-		});
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, (float) 200));
+		this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, (float) 200));
+		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, (float) 200));
+		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, (float) 200));
 	}
 
 	@Override

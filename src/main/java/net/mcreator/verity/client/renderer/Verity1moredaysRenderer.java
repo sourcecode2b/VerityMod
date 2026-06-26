@@ -8,13 +8,13 @@ import net.minecraft.client.model.HierarchicalModel;
 
 import net.mcreator.verity.entity.Verity1moredaysEntity;
 import net.mcreator.verity.client.model.animations.verityAnimation;
-import net.mcreator.verity.client.model.Modelballofverity;
+import net.mcreator.verity.client.model.Modelballbutbetter;
 
-public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, Modelballofverity<Verity1moredaysEntity>> {
-	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/evil.png");
+public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, Modelballbutbetter<Verity1moredaysEntity>> {
+	private final ResourceLocation entityTexture = new ResourceLocation("verity:textures/entities/17736939.100000024_evil.png");
 
 	public Verity1moredaysRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(Modelballofverity.LAYER_LOCATION)), 0.5f);
+		super(context, new AnimatedModel(context.bakeLayer(Modelballbutbetter.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
@@ -22,7 +22,7 @@ public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, 
 		return entityTexture;
 	}
 
-	private static final class AnimatedModel extends Modelballofverity<Verity1moredaysEntity> {
+	private static final class AnimatedModel extends Modelballbutbetter<Verity1moredaysEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<Verity1moredaysEntity>() {
 			@Override

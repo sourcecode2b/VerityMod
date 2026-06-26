@@ -34,6 +34,8 @@ public class FLASHLIGHTOFFRightclickedProcedure {
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 50);
 		}
 	}
 }

@@ -20,7 +20,6 @@ public class VerityModItems {
 	public static final RegistryObject<Item> VERITY_SPAWN_EGG;
 	public static final RegistryObject<Item> VERITI;
 	public static final RegistryObject<Item> VERITY_2_SPAWN_EGG;
-	public static final RegistryObject<Item> VERITY_3_SPAWN_EGG;
 	public static final RegistryObject<Item> BOX;
 	public static final RegistryObject<Item> VERITI_2;
 	public static final RegistryObject<Item> VERITY_2MOREDAYS_SPAWN_EGG;
@@ -31,11 +30,15 @@ public class VerityModItems {
 	public static final RegistryObject<Item> FLASHLIGHTBLOCK;
 	public static final RegistryObject<Item> FLASHLIGHT;
 	public static final RegistryObject<Item> FLASHLIGHTOFF;
+	public static final RegistryObject<Item> VERITY_2NOTTALKING_SPAWN_EGG;
+	public static final RegistryObject<Item> VERITIDAY_3;
+	public static final RegistryObject<Item> GOATMAN_SPAWN_EGG;
+	public static final RegistryObject<Item> FOLLOW;
+	public static final RegistryObject<Item> VERITYTALKING_SPAWN_EGG;
 	static {
 		VERITY_SPAWN_EGG = REGISTRY.register("verity_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY, -256, -13261, new Item.Properties()));
 		VERITI = REGISTRY.register("veriti", VeritiItem::new);
 		VERITY_2_SPAWN_EGG = REGISTRY.register("verity_2_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY_2, -256, -13261, new Item.Properties()));
-		VERITY_3_SPAWN_EGG = REGISTRY.register("verity_3_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY_3, -256, -13261, new Item.Properties()));
 		BOX = block(VerityModBlocks.BOX);
 		VERITI_2 = REGISTRY.register("veriti_2", Veriti2Item::new);
 		VERITY_2MOREDAYS_SPAWN_EGG = REGISTRY.register("verity_2moredays_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY_2MOREDAYS, -256, -13261, new Item.Properties()));
@@ -46,6 +49,11 @@ public class VerityModItems {
 		FLASHLIGHTBLOCK = block(VerityModBlocks.FLASHLIGHTBLOCK);
 		FLASHLIGHT = REGISTRY.register("flashlight", FlashlightItem::new);
 		FLASHLIGHTOFF = REGISTRY.register("flashlightoff", FLASHLIGHTOFFItem::new);
+		VERITY_2NOTTALKING_SPAWN_EGG = REGISTRY.register("verity_2nottalking_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY_2NOTTALKING, -256, -13261, new Item.Properties()));
+		VERITIDAY_3 = REGISTRY.register("veritiday_3", Veritiday3Item::new);
+		GOATMAN_SPAWN_EGG = REGISTRY.register("goatman_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.GOATMAN, -1, -1, new Item.Properties()));
+		FOLLOW = REGISTRY.register("follow", FollowItem::new);
+		VERITYTALKING_SPAWN_EGG = REGISTRY.register("veritytalking_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITYTALKING, -256, -13261, new Item.Properties()));
 	}
 
 	// Start of user code block custom items
