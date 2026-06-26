@@ -600,6 +600,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1509,6 +1513,113 @@
           "src/main/java/net/mcreator/verity/procedures/VeritytalkingOnInitialEntitySpawnProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Talkangry",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talkangry",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Angryveritytalking",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angryveritytalking",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/verity/models/item/angryveritytalking_spawn_egg.json",
+          "src/main/java/net/mcreator/verity/entity/AngryveritytalkingEntity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/AngryveritytalkingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "Angryverity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angryverity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/verity/entity/AngryverityEntity.java",
+          "src/main/java/net/mcreator/verity/client/renderer/AngryverityRenderer.java",
+          "src/main/resources/assets/verity/models/item/angryverity_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "AngryveritytalkingOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angryveritytalking_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/AngryveritytalkingOnEntityTickUpdateProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "AngryverityOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "angryverity_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/AngryverityOnEntityTickUpdateProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1575,6 +1686,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "yelllava",
+      "files": [
+        "audiomass-output-_7_"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "tag_elements": {},
@@ -1634,7 +1753,14 @@
       "item.verity.veritytalking_spawn_egg": "Verity Spawn Egg",
       "entity.verity.veritytalking": "Verity",
       "gamerule.normaltalk": "talk",
-      "gamerule.normaltalk.description": "3"
+      "gamerule.normaltalk.description": "3",
+      "gamerule.talkangry": "talkangry",
+      "gamerule.talkangry.description": "32",
+      "entity.verity.angryveritytalking": "Verity",
+      "item.verity.angryveritytalking_spawn_egg": "Verity Spawn Egg",
+      "item.verity.angryverity_spawn_egg": "Verity Spawn Egg",
+      "entity.verity.angryverity": "Verity",
+      "subtitles.yelllava": ""
     }
   },
   "metadata": {

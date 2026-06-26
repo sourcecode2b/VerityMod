@@ -35,6 +35,8 @@ public class VerityModItems {
 	public static final RegistryObject<Item> GOATMAN_SPAWN_EGG;
 	public static final RegistryObject<Item> FOLLOW;
 	public static final RegistryObject<Item> VERITYTALKING_SPAWN_EGG;
+	public static final RegistryObject<Item> ANGRYVERITYTALKING_SPAWN_EGG;
+	public static final RegistryObject<Item> ANGRYVERITY_SPAWN_EGG;
 	static {
 		VERITY_SPAWN_EGG = REGISTRY.register("verity_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITY, -256, -13261, new Item.Properties()));
 		VERITI = REGISTRY.register("veriti", VeritiItem::new);
@@ -54,6 +56,8 @@ public class VerityModItems {
 		GOATMAN_SPAWN_EGG = REGISTRY.register("goatman_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.GOATMAN, -1, -1, new Item.Properties()));
 		FOLLOW = REGISTRY.register("follow", FollowItem::new);
 		VERITYTALKING_SPAWN_EGG = REGISTRY.register("veritytalking_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.VERITYTALKING, -256, -13261, new Item.Properties()));
+		ANGRYVERITYTALKING_SPAWN_EGG = REGISTRY.register("angryveritytalking_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.ANGRYVERITYTALKING, -256, -13261, new Item.Properties()));
+		ANGRYVERITY_SPAWN_EGG = REGISTRY.register("angryverity_spawn_egg", () -> new ForgeSpawnEggItem(VerityModEntities.ANGRYVERITY, -256, -13261, new Item.Properties()));
 	}
 
 	// Start of user code block custom items

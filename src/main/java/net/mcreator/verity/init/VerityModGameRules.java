@@ -17,4 +17,5 @@ public class VerityModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> MONSTERTIME = GameRules.register("monstertime", GameRules.Category.SPAWNING, GameRules.BooleanValue.create(false));
 	public static final GameRules.Key<GameRules.BooleanValue> EVILTALK = GameRules.register("eviltalk", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
 	public static final GameRules.Key<GameRules.BooleanValue> NORMALTALK = GameRules.register("normaltalk", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
+	public static final GameRules.Key<GameRules.BooleanValue> TALKANGRY = GameRules.register("talkangry", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
 }

@@ -52,5 +52,12 @@
   "item.verity.veritytalking_spawn_egg": "Verity Spawn Egg",
   "entity.verity.veritytalking": "Verity",
   "gamerule.normaltalk": "talk",
-  "gamerule.normaltalk.description": "3"
+  "gamerule.normaltalk.description": "3",
+  "gamerule.talkangry": "talkangry",
+  "gamerule.talkangry.description": "32",
+  "entity.verity.angryveritytalking": "Verity",
+  "item.verity.angryveritytalking_spawn_egg": "Verity Spawn Egg",
+  "item.verity.angryverity_spawn_egg": "Verity Spawn Egg",
+  "entity.verity.angryverity": "Verity",
+  "subtitles.yelllava": ""
 }

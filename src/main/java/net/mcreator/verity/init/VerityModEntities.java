@@ -22,7 +22,9 @@ import net.mcreator.verity.VerityMod;
 public class VerityModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, VerityMod.MODID);
 	public static final RegistryObject<EntityType<VerityEntity>> VERITY = register("verity",
-			EntityType.Builder.<VerityEntity>of(VerityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(VerityEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<VerityEntity>of(VerityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(VerityEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<Verity2Entity>> VERITY_2 = register("verity_2",
 			EntityType.Builder.<Verity2Entity>of(Verity2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(Verity2Entity::new)
 
@@ -45,6 +47,10 @@ public class VerityModEntities {
 			EntityType.Builder.<GoatmanEntity>of(GoatmanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GoatmanEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<VeritytalkingEntity>> VERITYTALKING = register("veritytalking", EntityType.Builder.<VeritytalkingEntity>of(VeritytalkingEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(VeritytalkingEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AngryveritytalkingEntity>> ANGRYVERITYTALKING = register("angryveritytalking", EntityType.Builder.<AngryveritytalkingEntity>of(AngryveritytalkingEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(AngryveritytalkingEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AngryverityEntity>> ANGRYVERITY = register("angryverity", EntityType.Builder.<AngryverityEntity>of(AngryverityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(AngryverityEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -63,6 +69,8 @@ public class VerityModEntities {
 			Verity2nottalkingEntity.init();
 			GoatmanEntity.init();
 			VeritytalkingEntity.init();
+			AngryveritytalkingEntity.init();
+			AngryverityEntity.init();
 		});
 	}
 
@@ -76,5 +84,7 @@ public class VerityModEntities {
 		event.put(VERITY_2NOTTALKING.get(), Verity2nottalkingEntity.createAttributes().build());
 		event.put(GOATMAN.get(), GoatmanEntity.createAttributes().build());
 		event.put(VERITYTALKING.get(), VeritytalkingEntity.createAttributes().build());
+		event.put(ANGRYVERITYTALKING.get(), AngryveritytalkingEntity.createAttributes().build());
+		event.put(ANGRYVERITY.get(), AngryverityEntity.createAttributes().build());
 	}
 }

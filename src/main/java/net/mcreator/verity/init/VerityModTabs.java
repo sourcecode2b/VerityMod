@@ -29,6 +29,8 @@ public class VerityModTabs {
 			tabData.accept(VerityModItems.VERITY_2NOTTALKING_SPAWN_EGG.get());
 			tabData.accept(VerityModItems.GOATMAN_SPAWN_EGG.get());
 			tabData.accept(VerityModItems.VERITYTALKING_SPAWN_EGG.get());
+			tabData.accept(VerityModItems.ANGRYVERITYTALKING_SPAWN_EGG.get());
+			tabData.accept(VerityModItems.ANGRYVERITY_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(VerityModItems.VERITI.get());
 			tabData.accept(VerityModItems.VERITI_2.get());

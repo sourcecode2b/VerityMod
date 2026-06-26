@@ -54,5 +54,13 @@
         "stream": false
       }
     ]
+  },
+  "yelllava": {
+    "sounds": [
+      {
+        "name": "verity:audiomass-output-_7_",
+        "stream": false
+      }
+    ]
   }
 }

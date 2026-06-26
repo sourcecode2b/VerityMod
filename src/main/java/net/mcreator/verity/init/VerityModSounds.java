@@ -21,4 +21,5 @@ public class VerityModSounds {
 	public static final RegistryObject<SoundEvent> FLASHLIGHT = REGISTRY.register("flashlight", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("verity", "flashlight")));
 	public static final RegistryObject<SoundEvent> HELLOSOMEONETHERE = REGISTRY.register("hellosomeonethere", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("verity", "hellosomeonethere")));
 	public static final RegistryObject<SoundEvent> HELLOIMABOX = REGISTRY.register("helloimabox", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("verity", "helloimabox")));
+	public static final RegistryObject<SoundEvent> YELLLAVA = REGISTRY.register("yelllava", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("verity", "yelllava")));
 }

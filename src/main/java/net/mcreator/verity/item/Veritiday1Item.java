@@ -6,11 +6,14 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
+import net.mcreator.verity.procedures.VerityOnEntityTickUpdateProcedure;
 import net.mcreator.verity.procedures.Veritiday1RightclickedOnBlockProcedure;
 
 import java.util.List;
@@ -38,5 +41,11 @@ public class Veritiday1Item extends Item {
 		super.useOn(context);
 		Veritiday1RightclickedOnBlockProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(), context.getClickedPos().getZ(), context.getPlayer());
 		return InteractionResult.SUCCESS;
+	}
+
+	@Override
+	public void onDestroyed(ItemEntity entity, DamageSource damagesource) {
+		super.onDestroyed(entity, damagesource);
+		VerityOnEntityTickUpdateProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 }

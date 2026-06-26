@@ -22,5 +22,7 @@ public class VerityModEntityRenderers {
 		event.registerEntityRenderer(VerityModEntities.VERITY_2NOTTALKING.get(), Verity2nottalkingRenderer::new);
 		event.registerEntityRenderer(VerityModEntities.GOATMAN.get(), GoatmanRenderer::new);
 		event.registerEntityRenderer(VerityModEntities.VERITYTALKING.get(), VeritytalkingRenderer::new);
+		event.registerEntityRenderer(VerityModEntities.ANGRYVERITYTALKING.get(), AngryveritytalkingRenderer::new);
+		event.registerEntityRenderer(VerityModEntities.ANGRYVERITY.get(), AngryverityRenderer::new);
 	}
 }

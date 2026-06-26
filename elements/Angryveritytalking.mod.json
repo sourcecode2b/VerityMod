@@ -5,7 +5,7 @@
     "mobName": "Verity",
     "mobLabel": "",
     "mobModelName": "Modelballbutbetter",
-    "mobModelTexture": "17717492.899999976_happy.png",
+    "mobModelTexture": "untitled_design-removebg-preview.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -80,12 +80,12 @@
     "attackStrength": 8,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.2,
+    "movementSpeed": 0.0,
     "stepHeight": 10.0,
     "armorBaseValue": 0.0,
     "trackingRange": 300,
     "followRange": 300,
-    "health": 58,
+    "health": 10,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -101,7 +101,7 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": true,
     "immuneToFallDamage": true,
     "immuneToCactus": true,
@@ -133,14 +133,11 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onRightClickedOn": {
-      "name": "VerityRightClickedOnEntity"
-    },
     "onMobTickUpdate": {
-      "name": "VerityOnEntityTickUpdate"
+      "name": "AngryveritytalkingOnEntityTickUpdate"
     },
     "onInitialSpawn": {
-      "name": "VerityOnInitialEntitySpawn"
+      "name": "VeritytalkingOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

@@ -7,7 +7,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
@@ -19,8 +18,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -28,23 +25,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.verity.procedures.VerityRightClickedOnEntityProcedure;
+import net.mcreator.verity.procedures.VeritytalkingOnInitialEntitySpawnProcedure;
 import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
-import net.mcreator.verity.procedures.VerityOnInitialEntitySpawnProcedure;
-import net.mcreator.verity.procedures.VerityOnEntityTickUpdateProcedure;
+import net.mcreator.verity.procedures.AngryveritytalkingOnEntityTickUpdateProcedure;
 import net.mcreator.verity.init.VerityModItems;
 import net.mcreator.verity.init.VerityModEntities;
 
 import javax.annotation.Nullable;
 
-public class VerityEntity extends Monster {
+public class AngryveritytalkingEntity extends Monster {
 	public final AnimationState animationState0 = new AnimationState();
 
-	public VerityEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(VerityModEntities.VERITY.get(), world);
+	public AngryveritytalkingEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(VerityModEntities.ANGRYVERITYTALKING.get(), world);
 	}
 
-	public VerityEntity(EntityType<VerityEntity> type, Level world) {
+	public AngryveritytalkingEntity(EntityType<AngryveritytalkingEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(10f);
 		xpReward = 0;
@@ -90,6 +86,8 @@ public class VerityEntity extends Monster {
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
+			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
 		if (damagesource.getDirectEntity() instanceof Player)
@@ -125,22 +123,7 @@ public class VerityEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		VerityOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
-		return retval;
-	}
-
-	@Override
-	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
-		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
-		super.mobInteract(sourceentity, hand);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level();
-
-		VerityRightClickedOnEntityProcedure.execute(entity, sourceentity);
+		VeritytalkingOnInitialEntitySpawnProcedure.execute();
 		return retval;
 	}
 
@@ -155,7 +138,7 @@ public class VerityEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		VerityOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		AngryveritytalkingOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
@@ -163,8 +146,8 @@ public class VerityEntity extends Monster {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
-		builder = builder.add(Attributes.MAX_HEALTH, 58);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 300);

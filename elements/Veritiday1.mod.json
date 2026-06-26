@@ -52,6 +52,9 @@
     "onRightClickedOnBlock": {
       "name": "Veritiday1RightclickedOnBlock"
     },
+    "onItemEntityDestroyed": {
+      "name": "VerityOnEntityTickUpdate"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
