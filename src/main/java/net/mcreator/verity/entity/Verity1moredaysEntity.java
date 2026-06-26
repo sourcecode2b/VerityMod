@@ -4,6 +4,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -11,23 +12,24 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AnimationState;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.procedures.Verity1moredaysRightClickedOnEntityProcedure;
+import net.mcreator.verity.procedures.Verity1moredaysOnInitialEntitySpawnProcedure;
 import net.mcreator.verity.procedures.Verity1moredaysOnEntityTickUpdateProcedure;
 import net.mcreator.verity.init.VerityModEntities;
+
+import javax.annotation.Nullable;
 
 public class Verity1moredaysEntity extends Monster {
 	public final AnimationState animationState0 = new AnimationState();
@@ -77,6 +79,13 @@ public class Verity1moredaysEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		Verity1moredaysOnInitialEntitySpawnProcedure.execute();
+		return retval;
 	}
 
 	@Override

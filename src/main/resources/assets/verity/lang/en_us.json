@@ -59,5 +59,7 @@
   "item.verity.angryveritytalking_spawn_egg": "Verity Spawn Egg",
   "item.verity.angryverity_spawn_egg": "Verity Spawn Egg",
   "entity.verity.angryverity": "Verity",
-  "subtitles.yelllava": ""
+  "subtitles.yelllava": "",
+  "gamerule.videohappened.description": "happened?",
+  "gamerule.videohappened": "video"
 }

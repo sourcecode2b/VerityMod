@@ -1620,6 +1620,73 @@
           "src/main/java/net/mcreator/verity/procedures/AngryverityOnEntityTickUpdateProcedure.java"
         ]
       }
+    },
+    {
+      "name": "TestForEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_for_event",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/TestForEventProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Videohappened",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "videohappened",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Verity1moredaysOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "verity_1moredays_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/Verity1moredaysOnInitialEntitySpawnProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Openvid",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "openvid",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/OpenvidProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1760,7 +1827,9 @@
       "item.verity.angryveritytalking_spawn_egg": "Verity Spawn Egg",
       "item.verity.angryverity_spawn_egg": "Verity Spawn Egg",
       "entity.verity.angryverity": "Verity",
-      "subtitles.yelllava": ""
+      "subtitles.yelllava": "",
+      "gamerule.videohappened.description": "happened?",
+      "gamerule.videohappened": "video"
     }
   },
   "metadata": {
