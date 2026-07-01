@@ -7,7 +7,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HierarchicalModel;
 
 import net.mcreator.verity.entity.AngryverityEntity;
-import net.mcreator.verity.client.model.animations.verityAnimation;
+import net.mcreator.verity.client.model.animations.ballbutbetterAnimation;
 import net.mcreator.verity.client.model.Modelballbutbetter;
 
 public class AngryverityRenderer extends MobRenderer<AngryverityEntity, Modelballbutbetter<AngryverityEntity>> {
@@ -33,7 +33,7 @@ public class AngryverityRenderer extends MobRenderer<AngryverityEntity, Modelbal
 			@Override
 			public void setupAnim(AngryverityEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animate(entity.animationState0, verityAnimation.bounce, ageInTicks, 1.5f);
+				this.animateWalk(ballbutbetterAnimation.animation, limbSwing, limbSwingAmount, 0.8f, 1f);
 			}
 		};
 

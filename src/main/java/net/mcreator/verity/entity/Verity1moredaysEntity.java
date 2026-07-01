@@ -23,7 +23,6 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.procedures.Verity1moredaysRightClickedOnEntityProcedure;
 import net.mcreator.verity.procedures.Verity1moredaysOnInitialEntitySpawnProcedure;
 import net.mcreator.verity.procedures.Verity1moredaysOnEntityTickUpdateProcedure;
@@ -32,8 +31,6 @@ import net.mcreator.verity.init.VerityModEntities;
 import javax.annotation.Nullable;
 
 public class Verity1moredaysEntity extends Monster {
-	public final AnimationState animationState0 = new AnimationState();
-
 	public Verity1moredaysEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(VerityModEntities.VERITY_1MOREDAYS.get(), world);
 	}
@@ -101,14 +98,6 @@ public class Verity1moredaysEntity extends Monster {
 
 		Verity1moredaysRightClickedOnEntityProcedure.execute(entity, sourceentity);
 		return retval;
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(VerityPlaybackConditionProcedure.execute(), this.tickCount);
-		}
 	}
 
 	@Override

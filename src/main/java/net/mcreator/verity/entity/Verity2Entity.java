@@ -13,7 +13,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -21,12 +20,9 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.verity.procedures.VeritytalkevilOnEntityTickUpdateProcedure;
-import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.init.VerityModEntities;
 
 public class Verity2Entity extends Monster {
-	public final AnimationState animationState0 = new AnimationState();
-
 	public Verity2Entity(PlayMessages.SpawnEntity packet, Level world) {
 		this(VerityModEntities.VERITY_2.get(), world);
 	}
@@ -72,14 +68,6 @@ public class Verity2Entity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(VerityPlaybackConditionProcedure.execute(), this.tickCount);
-		}
 	}
 
 	@Override

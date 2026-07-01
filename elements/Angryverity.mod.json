@@ -25,13 +25,10 @@
     "animations": [
       {
         "animation": {
-          "value": "CUSTOM:verityAnimation.bounce"
+          "value": "CUSTOM:ballbutbetterAnimation.animation"
         },
-        "speed": 1.5,
-        "condition": {
-          "name": "VerityPlaybackCondition"
-        },
-        "walking": false,
+        "speed": 0.8,
+        "walking": true,
         "amplitude": 1.0
       }
     ],

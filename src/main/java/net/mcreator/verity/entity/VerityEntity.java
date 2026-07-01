@@ -4,6 +4,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
@@ -20,20 +21,22 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.verity.procedures.VerityRightClickedOnEntityProcedure;
-import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
+import net.mcreator.verity.procedures.VerityOnInitialEntitySpawnProcedure;
 import net.mcreator.verity.procedures.VerityOnEntityTickUpdateProcedure;
 import net.mcreator.verity.init.VerityModItems;
 import net.mcreator.verity.init.VerityModEntities;
 
-public class VerityEntity extends Monster {
-	public final AnimationState animationState0 = new AnimationState();
+import javax.annotation.Nullable;
 
+public class VerityEntity extends Monster {
 	public VerityEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(VerityModEntities.VERITY.get(), world);
 	}
@@ -117,6 +120,13 @@ public class VerityEntity extends Monster {
 	}
 
 	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		VerityOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		return retval;
+	}
+
+	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
@@ -129,14 +139,6 @@ public class VerityEntity extends Monster {
 
 		VerityRightClickedOnEntityProcedure.execute(entity, sourceentity);
 		return retval;
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(VerityPlaybackConditionProcedure.execute(), this.tickCount);
-		}
 	}
 
 	@Override

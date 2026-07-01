@@ -15,7 +15,6 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -24,14 +23,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.procedures.Verity2moredaysRightClickedOnEntityProcedure;
 import net.mcreator.verity.procedures.Verity2moredaysOnEntityTickUpdateProcedure;
 import net.mcreator.verity.init.VerityModEntities;
 
 public class Verity2moredaysEntity extends Monster {
-	public final AnimationState animationState0 = new AnimationState();
-
 	public Verity2moredaysEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(VerityModEntities.VERITY_2MOREDAYS.get(), world);
 	}
@@ -92,14 +88,6 @@ public class Verity2moredaysEntity extends Monster {
 
 		Verity2moredaysRightClickedOnEntityProcedure.execute(entity, sourceentity);
 		return retval;
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(VerityPlaybackConditionProcedure.execute(), this.tickCount);
-		}
 	}
 
 	@Override

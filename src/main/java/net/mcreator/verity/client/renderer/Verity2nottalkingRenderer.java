@@ -7,7 +7,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HierarchicalModel;
 
 import net.mcreator.verity.entity.Verity2nottalkingEntity;
-import net.mcreator.verity.client.model.animations.verityAnimation;
+import net.mcreator.verity.client.model.animations.ballbutbetterAnimation;
 import net.mcreator.verity.client.model.Modelballbutbetter;
 
 public class Verity2nottalkingRenderer extends MobRenderer<Verity2nottalkingEntity, Modelballbutbetter<Verity2nottalkingEntity>> {
@@ -33,7 +33,7 @@ public class Verity2nottalkingRenderer extends MobRenderer<Verity2nottalkingEnti
 			@Override
 			public void setupAnim(Verity2nottalkingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animate(entity.animationState0, verityAnimation.bounce, ageInTicks, 1.5f);
+				this.animateWalk(ballbutbetterAnimation.animation, limbSwing, limbSwingAmount, 0.8f, 1f);
 			}
 		};
 

@@ -7,7 +7,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HierarchicalModel;
 
 import net.mcreator.verity.entity.Verity1moredaysEntity;
-import net.mcreator.verity.client.model.animations.verityAnimation;
+import net.mcreator.verity.client.model.animations.ballbutbetterAnimation;
 import net.mcreator.verity.client.model.Modelballbutbetter;
 
 public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, Modelballbutbetter<Verity1moredaysEntity>> {
@@ -33,7 +33,7 @@ public class Verity1moredaysRenderer extends MobRenderer<Verity1moredaysEntity, 
 			@Override
 			public void setupAnim(Verity1moredaysEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animate(entity.animationState0, verityAnimation.bounce, ageInTicks, 1.5f);
+				this.animateWalk(ballbutbetterAnimation.animation, limbSwing, limbSwingAmount, 0.8f, 1f);
 			}
 		};
 

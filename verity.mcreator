@@ -1628,7 +1628,12 @@
       "locked_code": false,
       "registry_name": "test_for_event",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/verity/procedures/TestForEventProcedure.java"
         ]
@@ -1685,6 +1690,24 @@
         ],
         "files": [
           "src/main/java/net/mcreator/verity/procedures/OpenvidProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Makenote",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "makenote",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/verity/procedures/MakenoteProcedure.java"
         ]
       }
     }

@@ -27,15 +27,12 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.verity.procedures.VeritytalkingOnInitialEntitySpawnProcedure;
 import net.mcreator.verity.procedures.VeritytalkingOnEntityTickUpdateProcedure;
-import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.init.VerityModItems;
 import net.mcreator.verity.init.VerityModEntities;
 
 import javax.annotation.Nullable;
 
 public class VeritytalkingEntity extends Monster {
-	public final AnimationState animationState0 = new AnimationState();
-
 	public VeritytalkingEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(VerityModEntities.VERITYTALKING.get(), world);
 	}
@@ -125,14 +122,6 @@ public class VeritytalkingEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		VeritytalkingOnInitialEntitySpawnProcedure.execute();
 		return retval;
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(VerityPlaybackConditionProcedure.execute(), this.tickCount);
-		}
 	}
 
 	@Override

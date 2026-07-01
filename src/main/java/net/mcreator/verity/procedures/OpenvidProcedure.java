@@ -31,12 +31,7 @@ public class OpenvidProcedure {
 		if (world.getLevelData().getGameRules().getBoolean(VerityModGameRules.VIDEOHAPPENED) == false) {
 			if (!world.getEntitiesOfClass(Verity1moredaysEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(5 / 2d), e -> true).isEmpty()) {
 				world.getLevelData().getGameRules().getRule(VerityModGameRules.VIDEOHAPPENED).set(true, world.getServer());
-				try {
-					java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
-					desktop.browse(new java.net.URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				net.minecraft.Util.getPlatform().openUri("https://youtu.be/DdmlovfmiP4");
 			}
 		}
 	}

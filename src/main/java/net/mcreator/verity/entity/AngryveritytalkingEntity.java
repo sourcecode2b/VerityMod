@@ -26,7 +26,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.verity.procedures.VeritytalkingOnInitialEntitySpawnProcedure;
-import net.mcreator.verity.procedures.VerityPlaybackConditionProcedure;
 import net.mcreator.verity.procedures.AngryveritytalkingOnEntityTickUpdateProcedure;
 import net.mcreator.verity.init.VerityModItems;
 import net.mcreator.verity.init.VerityModEntities;
@@ -34,8 +33,6 @@ import net.mcreator.verity.init.VerityModEntities;
 import javax.annotation.Nullable;
 
 public class AngryveritytalkingEntity extends Monster {
-	public final AnimationState animationState0 = new AnimationState();
-
 	public AngryveritytalkingEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(VerityModEntities.ANGRYVERITYTALKING.get(), world);
 	}
@@ -125,14 +122,6 @@ public class AngryveritytalkingEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		VeritytalkingOnInitialEntitySpawnProcedure.execute();
 		return retval;
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(VerityPlaybackConditionProcedure.execute(), this.tickCount);
-		}
 	}
 
 	@Override
